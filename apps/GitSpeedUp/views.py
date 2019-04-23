@@ -38,7 +38,7 @@ class GitSpeedUpView(View):
                 redis_cli.setex("user_" + user_ip, 60, "_flag")
             else:
                 return self.return_error_message(request, "请求频率过高 稍等1分钟")
-            if not giturl.startswith("http://"):
+            if not giturl.startswith("http"):
                 return self.return_error_message(request, "请输入http地址 暂不支持git")
 
             task = git_clone.delay(giturl)
