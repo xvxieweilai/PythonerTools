@@ -1,0 +1,65 @@
+{% extends 'GitSpeedUp/base.html' %}
+
+{% block title %}
+    Pythoner工具箱
+{% endblock %}
+
+{% block body %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <input type="hidden" id="uuid" value="{{ task_id }}">
+            <h5 class="lead" id="message">任务已下发，请耐心等待</h5>
+            <div class="progress">
+                <div id="prog" class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+
+    </div>
+{% endblock %}
+
+
+{% block js %}
+
+
+    <script type="text/javascript">
+        var finished = false;
+        $(function () {
+            get_message();
+        });
+
+        function get_message() {
+            var uuidstr = $("#uuid").val();
+            var message = '';
+
+            uuidstr = uuidstr.trim();
+            $.getJSON('/GitSpeedUp/DownProcess/' + uuidstr + '/', function (data) {
+                    message = data.message;
+                    if (message == "finished") {
+                        finished = true;
+
+                    } else {
+                        $("#message").html(message);
+                        value = parseFloat(message.split(",")[1]) / parseFloat(message.split(",")[2]) * 100;
+                        if (message.split(",")[0] == "32") {
+                            $("#prog").css("width", value + "%");
+                        }
+
+                    }
+
+                }
+            );
+            if (!finished) {
+                setTimeout("get_message()", 1000);
+            } else {
+                $("#message").html("已完成，开始下载");
+                window.location.href = "/GitSpeedUp/FileDown/" + uuidstr + "/";
+            }
+
+
+        }
+
+    </script>
+{% endblock %}

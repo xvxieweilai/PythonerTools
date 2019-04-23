@@ -1,0 +1,81 @@
+{% extends 'GitSpeedUp/base.html' %}
+
+{% block title %}
+    Pythoner工具箱
+{% endblock %}
+
+{% block body %}
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">Github 加速下载</h1>
+            <p class="lead">水管虽小 已尽全力</p>
+            <form id="email_register_form" method="post" action="{{ url('git:index') }}">
+                <input type="hidden" name="uuid" id="uuid" value="">
+                <div class="form-group">
+                    <label for=""></label>
+                    <input type="text" name="giturl" id="giturl" class="form-control" placeholder="粘贴仓库地址"
+                           aria-describedby="helpId">
+                </div>
+                <div class="form-group form-inline">
+                    <input type="text" class="form-control" name="vcode" placeholder="验证码">
+                    &nbsp;
+                    <img class="rounded" id="vcode" src="" width="100" height="37" alt="验证码">
+                </div>
+                {% if error_message %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>{{ error_message }}</strong>
+                    </div>
+                {% endif %}
+
+                {{ csrf_input }}
+                <p class="lead">
+                    <button type="submit" class="btn btn-primary btn-lg" role="button">立即下载</button>
+                </p>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+
+
+    </div>
+{% endblock %}
+
+
+{% block js %}
+
+
+    <script type="text/javascript">
+        $(function () {
+            refreshVcode();
+            $("#vcode").click(function () {
+                refreshVcode();
+                $(".alert").hide();
+            });
+            $(".alert").alert();
+        });
+
+        function refreshVcode() {
+            var uuid = get_uuid();
+            $("#vcode").attr('src', '/Vcode/' + uuid + "/");
+            $("#uuid").val(uuid);
+        }
+
+        function get_uuid() {
+            var s = [];
+            var hexDigits = "0123456789abcdef";
+            for (var i = 0; i < 36; i++) {
+                s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+            }
+            s[14] = "4";
+            s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);
+            s[8] = s[13] = s[18] = s[23] = "-";
+
+            var uuid = s.join("");
+            return uuid;
+        }
+    </script>
+{% endblock %}
