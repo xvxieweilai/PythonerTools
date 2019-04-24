@@ -1,40 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2605400-447b-407f-a7c8-f5c1d99ff30d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.CFUserTextEncoding" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/PythonerTools.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonerTools/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonerTools/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonerTools/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonerTools/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/GitSpeedUp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/vcode/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/celery_task/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/celery_task/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/celery_task/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/celery_task/task.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/jinja2_env.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/axios.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/vue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/GitSpeedUp/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/GitSpeedUp/download.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/GitSpeedUp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/captcha/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/captcha/captcha.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/captcha/fonts/Arial.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/captcha/fonts/Georgia.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/captcha/fonts/actionj.ttf" afterDir="false" />
+    <list default="true" id="e2605400-447b-407f-a7c8-f5c1d99ff30d" name="Default Changelist" comment="使用Gitpython clone 仓库 &#10;异步处理clone&#10;写好以后才发现官方网页的下载zip更好用">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/GitSpeedUp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/GitSpeedUp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/GitSpeedUp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/GitSpeedUp/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/GitSpeedUp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+            <state relative-caret-position="521">
+              <caret line="78" column="26" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="26" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -115,8 +85,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/GitSpeedUp/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="49" column="70" lean-forward="true" selection-start-line="49" selection-start-column="70" selection-end-line="49" selection-end-column="70" />
+            <state relative-caret-position="426">
+              <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,6 +141,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="XXWL &lt;xxwl@duee.cn&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -184,15 +162,15 @@
         <option value="$PROJECT_DIR$/apps/vcode/urls.py" />
         <option value="$PROJECT_DIR$/apps/GitSpeedUp/urls.py" />
         <option value="$PROJECT_DIR$/templates/GitSpeedUp/index.html" />
-        <option value="$PROJECT_DIR$/templates/GitSpeedUp/base.html" />
         <option value="$PROJECT_DIR$/celery_task/task.py" />
         <option value="$PROJECT_DIR$/templates/GitSpeedUp/download.html" />
+        <option value="$PROJECT_DIR$/templates/GitSpeedUp/base.html" />
         <option value="$PROJECT_DIR$/apps/GitSpeedUp/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="657" />
+    <option name="x" value="617" />
     <option name="y" value="234" />
     <option name="width" value="1758" />
     <option name="height" value="1137" />
@@ -222,44 +200,6 @@
               <item name="PythonerTools" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="GitSpeedUp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonerTools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonerTools" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="vcode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonerTools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonerTools" type="462c0819:PsiDirectoryNode" />
-              <item name="celery_task" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonerTools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonerTools" type="462c0819:PsiDirectoryNode" />
-              <item name="PythonerTools" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonerTools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonerTools" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonerTools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonerTools" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="GitSpeedUp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonerTools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonerTools" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonerTools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonerTools" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="captcha" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -334,18 +274,33 @@
       <option name="presentableId" value="Default" />
       <updated>1556013491821</updated>
       <workItem from="1556013493415" duration="97000" />
-      <workItem from="1556013996083" duration="29377000" />
+      <workItem from="1556013996083" duration="32435000" />
     </task>
+    <task id="LOCAL-00001" summary="使用Gitpython clone 仓库 &#10;异步处理clone&#10;写好以后才发现官方网页的下载zip更好用">
+      <created>1556052082935</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556052082935</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修复https开头">
+      <created>1556053649784</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556053649784</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29474000" />
+    <option name="totallyTimeSpent" value="32532000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="657" y="234" width="1758" height="1137" extended-state="0" />
+    <frame x="889" y="186" width="1758" height="1137" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25291374" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25291374" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -359,8 +314,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3291866" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3291866" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.3291866" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3291866" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3291866" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -370,6 +325,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="使用Gitpython clone 仓库 &#10;异步处理clone&#10;写好以后才发现官方网页的下载zip更好用" />
+    <MESSAGE value="修复https开头" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复https开头" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PythonerTools/wsgi.py">
@@ -569,13 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/GitSpeedUp/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="49" column="70" lean-forward="true" selection-start-line="49" selection-start-column="70" selection-end-line="49" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/celery_task/task.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -603,10 +556,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/GitSpeedUp/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/GitSpeedUp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+        <state relative-caret-position="521">
+          <caret line="78" column="26" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="26" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

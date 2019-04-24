@@ -57,11 +57,23 @@ class GitDownLoadFileView(View):
 
 
 class FileDownView(View):
+
+    def file_iterator(self, file, chunk_size=512):
+        while True:
+            c = file.read(chunk_size)
+            if c:
+                yield c
+            else:
+                break
+
     def get(self, request, uuid):
         redis_cli = get_redis_connection("task_list")
-        message = redis_cli.delete(str(uuid))
-        file = open('/tmp/' + str(uuid) + '.zip', 'rb')
-        response = HttpResponse(file)
-        response['Content-Type'] = 'application/octet-stream'
-        response['Content-Disposition'] = 'attachment;filename="' + str(uuid) + '.zip"'
-        return response
+        redis_cli.delete(str(uuid))
+        try:
+            file = open('/tmp/' + str(uuid) + '.zip', 'rb')
+            response = StreamingHttpResponse(self.file_iterator(file))
+            response['Content-Type'] = 'application/octet-stream'
+            response['Content-Disposition'] = 'attachment;filename="' + str(uuid) + '.zip"'
+            return response
+        except:
+            return HttpResponse("文件未找到", status=404)
